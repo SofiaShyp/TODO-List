@@ -1,22 +1,33 @@
-# TODO-List
-TODO List
+# TODO List Application
 
-Десктопний застосунок для ведення списку завдань із підтримкою дедлайнів, звукових сповіщень та автозбереженням.
+A lightweight, modern desktop Task Manager built with C++ and Qt Quick (QML).
 
-ФУНКЦІНАЛЬНІСТЬ
--Створення, видалення та зміна статусу виконання завдань.
+## Features
+- Task management: Add, complete, and remove tasks
+- Deadline tracking with automated validation
+- Status filtering: View All, Active, or Completed tasks
+- Intrusive alerting: System tray notifications, custom pop-ups, and audio alarms
+- Persistent state management using JSON storage
 
--Встановлення дати й часу дедлайну.
+## Demonstration
+![App Demo](demo.gif)
 
--Потрійне сповіщення при настанні часу завдання: звуковий сигнал, системний баннер та внутрішнє спливаюче вікно.
+## Requirements
+- Qt 5.15+ or Qt 6.x
+- CMake 3.16+
+- C++17 compatible compiler (MinGW, MSVC, or GCC)
 
--Фільтрація завдань за вкладками: Усі, Активні, Завершені.
+## How to Run Locally
 
--Збереження та завантаження списку із JSON-файлу.
+### Option 1: Via Qt Creator
+1. Launch **Qt Creator**.
+2. Select **File > Open File or Project...** and choose `CMakeLists.txt`.
+3. Select your build kit and click **Configure Project**.
+4. Press `Ctrl + R` to build and run the application.
 
-ЯК ЗАПУСТИТИ ЛОКАЛЬНО
-1. Проєкт являє собою настільний менеджер завдань TODO List, написаний мовами C++ та Qt Quick QML.
-2. Додаток дозволяє керувати списками справ, встановлювати дедлайни, фільтрувати завдання за статусом та отримувати гучні звукові й візуальні сповіщення.
-3. Щоб запустити його локально, відкрийте **Qt Creator** і виберіть файл **`CMakeLists.txt`** у папці проєкту.
-4. Натисніть кнопку **Configure Project** у вікні налаштування компіляції.
-5. Натисніть комбінацію клавіш **Ctrl + R** для збірки та запуску програми.
+### Option 2: Via Terminal (CMake)
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
